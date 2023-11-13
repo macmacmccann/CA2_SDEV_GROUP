@@ -1,0 +1,15 @@
+You have to activate here like this on django
+
+srcuser@srcusercpu:~/Dropbox/django/CA2_SDEV_GROUP/env/bin$ source activate
+
+(env) srcuser@srcusercpu:~/Dropbox/django/CA2_SDEV_GROUP/env/bin$
+
+
+
+
+cd into the project products beofre running server 
+
+
+
+making a new file in the blank is outside the project !!
+
