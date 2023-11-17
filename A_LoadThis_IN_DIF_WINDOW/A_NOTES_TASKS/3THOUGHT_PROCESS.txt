@@ -1,0 +1,16 @@
+You can remove the warning by running the migrate command as shown here: ________________________________________________________________ 
+python manage.py migrate 
+________________________________________________________________ When you run this command, you will see in the output that 18 migrations are applied. 
+We  will  look  at  the  meaning  of  these  migrations  later.  If  you  execute  the  python 
+manage.py runserver again, the warning message is gone.  Create an app called blog. From the command line, quit the server with Control+c. 
+Then use the startapp command as shown below: 
+5 
+ 
+______________________________________________________________ 
+python manage.py startapp blog 
+then python3 migrate
+
+
+URl 
+
+accounts/signup

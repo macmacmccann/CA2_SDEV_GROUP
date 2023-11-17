@@ -1,0 +1,10 @@
+  if your seeing this folder you should have opened vis code from productsproject only
+and youll just mess yourself up if you dont open vis code from it 
+
+meaning open direcotry productproject -> terminal -> code . 
+	or just open folder productproject from vis code 
+		NOT CA2_SDEV_GROUP
+
+
+load all other
+neccesities in another vis code window 

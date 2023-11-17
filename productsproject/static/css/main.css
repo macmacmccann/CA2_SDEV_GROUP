@@ -37,6 +37,17 @@ backdrop-filter: blur(20px);
 }
 
 
+.header_contains_image_cleanly{
+
+    height: 10%;
+    background-position:  center; 
+    background-size: 100% auto;
+    background-repeat:repeat; 
+    background-image: url("/img/gutter.jpg");
+  
+  }
+
+
 
 
 nav ul {
