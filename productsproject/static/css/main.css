@@ -1,0 +1,119 @@
+
+
+
+
+
+
+
+h1{
+
+    color: red;
+
+}
+
+
+
+h1,h2,h3{
+color: rgb(255, 251, 251);
+text-align: center;
+text-transform: capitalize;
+ text-shadow: 2px  #131111;
+ letter-spacing: 15PX;
+ text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+
+}
+
+
+
+nav {
+  background-color: rgba(255, 252, 252, 0.144);
+/*  background-image: url("/img/broken_glass.jpg");*/
+z-index: 1;
+backdrop-filter: blur(20px);
+}
+
+
+.header_body_border:hover{
+}
+
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  justify-content: space-evenly; 
+  transform: scale(1.1);
+}
+
+nav ul:hover{
+background-color: rgba(240, 248, 255, 0.192);
+}
+
+
+nav ul li:hover{
+  transition: transform .1s;
+  transform: scale(1.1);
+}
+
+nav ul li {
+  padding: 1em;
+
+ max-width: 100%;
+ 
+
+}
+
+nav a {
+  animation: 1s ease-in forwards;
+  font-size: larger;
+  font-weight: 900;
+  color: blueviolet;
+  text-decoration: none;
+  transition: all .6s;
+  text-transform: full-width;
+  letter-spacing: 5px;
+  
+
+
+  
+}
+
+nav a:hover {
+  color: #000000;
+  transition: transform .5s;
+  transform: scale(2);
+
+}
+
+
+.p2{
+background-color: aliceblue;
+}
+
+section._box{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ border-radius: 1cm;
+  padding-top: 1.5%;
+margin-top: 50px;
+padding:5%;
+
+
+}
+section._box2{
+
+  border-radius: 1cm;
+   padding: 1%;
+   font-size: xx-large;
+ 
+ 
+ 
+ }
+p{
+  
+
+  font-size: xx-large;
+}

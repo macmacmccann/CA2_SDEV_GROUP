@@ -9,3 +9,8 @@ Then use the startapp command as shown below:
 ______________________________________________________________ 
 python manage.py startapp blog 
 then python3 migrate
+
+
+URl 
+
+accounts/signup
