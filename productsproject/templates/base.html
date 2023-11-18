@@ -12,7 +12,7 @@
        
         <meta name="viewport" content="width=device-width, initial-scale=1">
   
-   
+ <script src=    "{% static '/js/main.js' %}"></script>
       <link rel="stylesheet" type = "text/css" href= "{% static 'css/main.css' %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400">
       
@@ -38,7 +38,7 @@
   <a class = 'whoamI' href="/admin">Admin</a>
 
         {% if user.is_authenticated %} 
-        <p class = 'whoamI'> Your logged in as {{ user.username }}</p>
+        <p class = 'whoamIlogged'>||- Your logged in as :: {{ user.username }} -||</p>
         <a class = 'whoamI' href="  {% url 'logout' %}  "> Log Out </a>
         {% else %} 
         <p class = 'whoamI' > You are not logged in. </p>
@@ -51,10 +51,11 @@
 
 
 
-                <li><a href="{% url 'home' %}" >HOME</a> </li> 
-                <li><a href="{% url 'about' %}" >ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="{% url 'shop:about' %}" >HOME/SHOP</a> </li> 
                 <li><a href="services.html">CART</a></li>
+
+                <li><a href="{% url 'shop:home' %}" >homedoesntwork</a></li>
+                <li><a href="services.html">SERVICES</a></li>
           
             </ul>
         </nav>
