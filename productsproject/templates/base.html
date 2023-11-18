@@ -33,7 +33,7 @@
  </div>
   <h1 class = "title"></h1>
 
- 
+ <!-- This is a comment in HTML 
   <a class = 'whoamI' href="{% url 'signup' %}">Sign Up</a>
   <a class = 'whoamI' href="/admin">Admin</a>
 
@@ -44,21 +44,20 @@
         <p class = 'whoamI' > You are not logged in. </p>
         <a class = 'whoamI' href="  {% url 'login' %}  "> Log In </a>
         {% endif %} 
-
+-->
 
         <nav>
             <ul>
 
-
-
-                <li><a href="{% url 'shop:about' %}" >HOME/SHOP</a> </li> 
+                <li><a href="{% url 'home' %}" >HOME[SHOP]</a></li>
                 <li><a href="services.html">CART</a></li>
-
-                <li><a href="{% url 'shop:home' %}" >homedoesntwork</a></li>
                 <li><a href="services.html">SERVICES</a></li>
+
           
             </ul>
         </nav>
+
+
         <header class ="transparent_header">
             <br></br>
             <br></br>
@@ -66,8 +65,42 @@
              <h1 class = "main_website_name_text"> CODING COURSES ACADEMY </h1>
              <h1 class = "main_website_name_text_2"> LEARN THE INS AND OUTS</h1>
         </main>
+
+
+
             <br></br>
             <br></br>
+
+
+
+
+
+        <nav>
+            <ul>
+
+                <li><a href="admin/">ADMIN</a></li>
+
+                {% if user.is_authenticated %}
+               
+                <li>  <a href="  {% url 'logout' %}  "> LOG OUT </a></li>
+                <li><a href="accounts/password-change/"></a></li>
+               <li><a href="{% url 'password_change' %}">CHANGE PASSWORD</a></li>
+
+                {% else %} 
+                <li><a href="  {% url 'login' %}  "> LOG IN </a></li>
+               <li><a href="{% url 'password_reset' %}">FORGOT PASSWORD?</a></li>
+                 <li><a href="{% url 'signup' %}">SIGN UP</a></li>
+
+
+                {% endif %} 
+          
+            </ul>
+        </nav>
+
+
+
+
+
             <nav class = "header_body_border"><ul><li></li> </ul> </nav>
     </div>
         <nav class = "header_body_border"><ul><li></li> </ul> </nav>
