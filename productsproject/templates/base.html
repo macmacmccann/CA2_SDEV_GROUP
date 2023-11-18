@@ -11,46 +11,51 @@
         <title> My Blog </title>
        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type = "text/css" href= "{% static 'css/main.css' %}">
+  
+   
+      <link rel="stylesheet" type = "text/css" href= "{% static 'css/main.css' %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400">
       
-        
+
+
+    </body> 
+  </html> 
+  
 
     </head> 
     <header>
-        <a href="{% url 'home' %}" >Home</a> <a href="{% url 'about' %}" >About</a>
-
-        {% if user.is_authenticated %} 
-        <p> Hi {{ user.username }}</p>
-        <a href="  {% url 'logout' %}  "> Log Out </a>
-
-        {% else %} 
-        <p> You are not logged in. </p>
-        <a href="  {% url 'login' %}  "> Log In </a>
-        {% endif %} 
-
-        <h1>erfgwerfgefg</h1>
-
-
-
 
     
-<h1 class = "titletop">renovation,Removal,Safety and Clean </h1>
 <div class = "header_contains_image_cleanly">
     <div class = "header_displayflex"> </div>
         <div class = "icon_nice_wrapper">
-
- <img class ="icon" src="img/icon.png">
+ <img class ="icon" src="{% static 'images/icon.png' %}">
  </div>
   <h1 class = "title"></h1>
+
+ 
+  <a class = 'whoamI' href="{% url 'signup' %}">Sign Up</a>
+  <a class = 'whoamI' href="/admin">Admin</a>
+
+        {% if user.is_authenticated %} 
+        <p class = 'whoamI'> Your logged in as {{ user.username }}</p>
+        <a class = 'whoamI' href="  {% url 'logout' %}  "> Log Out </a>
+        {% else %} 
+        <p class = 'whoamI' > You are not logged in. </p>
+        <a class = 'whoamI' href="  {% url 'login' %}  "> Log In </a>
+        {% endif %} 
 
 
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
+
+
+
+                <li><a href="{% url 'home' %}" >HOME</a> </li> 
+                <li><a href="{% url 'about' %}" >ABOUT</a></li>
                 <li><a href="services.html">SERVICES</a></li>
-                <li><a href="#">ABOUT US </a></li>
-                <li><a href="#">FAQ</a></li>    
+                <li><a href="services.html">CART</a></li>
+          
             </ul>
         </nav>
         <header class ="transparent_header">
@@ -65,7 +70,7 @@
             <nav class = "header_body_border"><ul><li></li> </ul> </nav>
     </div>
         <nav class = "header_body_border"><ul><li></li> </ul> </nav>
-         <h1 class = "main_website_name_text_3"> WORKING SINCE 1998</h1>
+         <h1 class = "main_website_name_text_3"> header</h1>
          <nav class = "header_body_border"><ul><li></li> </ul> </nav>
          </header>
 

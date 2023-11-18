@@ -2,7 +2,9 @@
 
 
 
-
+body{
+    background-color: rgba(162, 170, 170, 0.795);
+}
 
 
 h1{
@@ -23,7 +25,27 @@ text-transform: capitalize;
 
 }
 
+.whoamI{
 
+    text-align: center;
+    color: white;
+    size: 2em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    backdrop-filter: blur(20px);
+    background-color: rgba(171, 173, 175, 0.425);
+    
+
+}
+
+a.whoamI{
+    text-decoration: none;
+    font: bolder;
+    text-align: center;
+    letter-spacing: 20px;
+    margin-left: 40%;
+    size: 2em;
+}
 
 nav {
   background-color: rgba(255, 252, 252, 0.144);
@@ -43,12 +65,43 @@ backdrop-filter: blur(20px);
     background-position:  center; 
     background-size: 100% auto;
     background-repeat:repeat; 
-    background-image: url("/img/gutter.jpg");
+    background-image: url("/static/images/main.jpg");
   
-  }
+  
+}
 
 
 
+.main_website_name_row {
+
+    backdrop-filter: blur(3px);
+    flex-direction: column;
+    }
+    
+    
+    
+    .main_website_name_text {
+      letter-spacing: 15px;
+      animation: fadeIn 4s ease-in forwards;
+      backdrop-filter: blur(20px);
+    
+    
+    }
+    
+    .main_website_name_text_2 {
+      letter-spacing: 15px;
+      animation: fadeIn 4s ease-in forwards;
+      backdrop-filter: blur(20px);
+      font-size: small;
+    
+    }
+    .main_website_name_text_3 {
+      letter-spacing: 15px;
+      animation: fadeIn 4s ease-in forwards;
+      backdrop-filter: blur(20px);
+      background-color: rgba(240, 248, 255, 0.334);
+    
+    }
 
 nav ul {
   list-style: none;
@@ -80,7 +133,7 @@ nav a {
   animation: 1s ease-in forwards;
   font-size: larger;
   font-weight: 900;
-  color: blueviolet;
+  color: white;
   text-decoration: none;
   transition: all .6s;
   text-transform: full-width;
@@ -128,3 +181,52 @@ p{
 
   font-size: xx-large;
 }
+
+.icon_nice_wrapper{
+
+
+    background-color: rgb(56, 197, 197);
+    position:relative;
+    left: 0%;
+    margin-left: 50px;
+    width:120px;
+    height:120px;
+    padding: 0%;
+    border-radius: 70px; 
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  
+  }
+  
+  .icon {
+  
+  
+    background-color: rgba(240, 255, 255, 0.278);
+  
+    position:relative;
+    left: 0%;
+    width:100px;
+    padding: 0%;
+  
+  
+    border-radius: 70px; /* Makes it a circle */
+  
+    backdrop-filter: blur(5px);
+  }
+
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    padding: 5%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.278);
+    backdrop-filter: blur(5px);
+  }
