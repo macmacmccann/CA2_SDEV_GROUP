@@ -16,8 +16,6 @@
       <link rel="stylesheet" type = "text/css" href= "{% static 'css/main.css' %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400">
       
-
-
     </body> 
   </html> 
   
@@ -46,12 +44,17 @@
         {% endif %} 
 -->
 
+ <!--               -->
+
+
+
+
         <nav>
             <ul>
 
                 <li><a href="{% url 'home' %}" >HOME[SHOP]</a></li>
-                <li><a href="services.html">CART</a></li>
-                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="services.html">CART</a></li> <!--      NOT THERE          -->
+                <li><a href="services.html">SERVICES</a></li> <!--    NOT THERE            -->
 
           
             </ul>
@@ -78,12 +81,20 @@
         <nav>
             <ul>
 
-                <li><a href="admin/">ADMIN</a></li>
+                <!--   <li><a href="admin/">ADMIN</a></li> STUPIDLY LINKED LINK -->
+                <li><a href="{% url 'admin:index' %}">||ADMIN||</a></li>
 
                 {% if user.is_authenticated %}
-               
-                <li>  <a href="  {% url 'logout' %}  "> LOG OUT </a></li>
-                <li><a href="accounts/password-change/"></a></li>
+              
+                    
+                
+
+                <li>  <a href="{% url 'logout' %}"> LOG OUT </a></li>
+                              <!-- 
+                <li><a href="accounts/password-change/"></a></li>                 -->
+
+
+
                <li><a href="{% url 'password_change' %}">CHANGE PASSWORD</a></li>
 
                 {% else %} 

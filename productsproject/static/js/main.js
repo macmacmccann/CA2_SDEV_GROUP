@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+ console.log("  ")
+
+
+ console.log("   http://127.0.0.1:8080/home/                                ")
+ console.log(" http://127.0.0.1:8080/about/                                  ")
+ console.log(" http://127.0.0.1:8080/custom-accounts/signup/")
+ console.log("  http://127.0.0.1:8080/accounts/password_change/")
+ console.log("http://127.0.0.1:8080/accounts/password_change/done/")
 
 
 
