@@ -22,13 +22,10 @@
 
     </head> 
     <header>
-
     
 <div class = "header_contains_image_cleanly">
     <div class = "header_displayflex"> </div>
-        <div class = "icon_nice_wrapper">
  <img class ="icon" src="{% static 'images/icon.png' %}">
- </div>
   <h1 class = "title"></h1>
 
  <!-- This is a comment in HTML 
@@ -47,18 +44,11 @@
  <!--               -->
 
 
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/n61ULEU7CO0?si=jj_I2aSobtIXx2B7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-        <nav>
-            <ul>
 
-                <li><a href="{% url 'home' %}" >HOME[SHOP]</a></li>
-                <li><a href="services.html">CART</a></li> <!--      NOT THERE          -->
-                <li><a href="services.html">SERVICES</a></li> <!--    NOT THERE            -->
 
-          
-            </ul>
-        </nav>
 
 
         <header class ="transparent_header">
@@ -76,37 +66,94 @@
 
 
 
+            <nav>
+                <ul>
+                 <!--   <li><a href="admin/">ADMIN</a></li> STUPIDLY LINKED LINK -->
+                <li><a href="{% url 'admin:index' %}">[]- ADMIN -[]</a></li>
+                </ul>
+            </nav>
 
+            <nav>
+                <ul>
+                          <p></p> <!--  FILLER -->
+                </ul>
+            </nav>
+        <nav>
+    
 
         <nav>
             <ul>
 
-                <!--   <li><a href="admin/">ADMIN</a></li> STUPIDLY LINKED LINK -->
-                <li><a href="{% url 'admin:index' %}">||ADMIN||</a></li>
+                <li><a href="{% url 'home' %}" >HOME[SHOP]</a></li>
+                <li><a href="services.html">CART </a></li> <!--      NOT THERE          -->
+
+            </ul>
+        </nav>
+
+          <nav>
+                <ul>
+                          <p></p> <!--  FILLER -->
+                </ul>
+            </nav>
+        <nav>
+            <ul>
+
+          
 
                 {% if user.is_authenticated %}
-              
-                    
-                
-
                 <li>  <a href="{% url 'logout' %}"> LOG OUT </a></li>
-                              <!-- 
-                <li><a href="accounts/password-change/"></a></li>                 -->
-
-
-
+               <!--  <li><a href="accounts/password-change/"></a></li> -->
                <li><a href="{% url 'password_change' %}">CHANGE PASSWORD</a></li>
 
                 {% else %} 
                 <li><a href="  {% url 'login' %}  "> LOG IN </a></li>
                <li><a href="{% url 'password_reset' %}">FORGOT PASSWORD?</a></li>
                  <li><a href="{% url 'signup' %}">SIGN UP</a></li>
-
-
                 {% endif %} 
           
             </ul>
         </nav>
+
+
+        <nav>
+            <ul>
+                      <p></p> <!--  FILLER -->
+            </ul>
+        </nav>
+
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}" >CUSTOM USER MODEL</a></li>
+                <li><a href="{% url 'home' %}" >[1-1,M-M,_ONE - MANY]</a></li>
+                <li><a href="{% url 'home' %}" >USER PROFILE</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <ul>
+                      <p></p> <!--  FILLER -->
+            </ul>
+        </nav>
+
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}" >UPLOAD AN IMAGE</a></li>
+                <li><a href="{% url 'home' %}" >CART</a></li>
+
+
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,6 +166,90 @@
          <nav class = "header_body_border"><ul><li></li> </ul> </nav>
          </header>
 
+
+<!--  TO DO NOT A REAL LINK  -->
+
+<div class = "backdrop_control">
+
+    <div class = "todo"> 
+
+        <h1 class = "brief" >[[ BREIF ]]</h1>
+
+        <h3 class = "brieftask"> <p class = "phase">FIRST STAGE </p></h3>
+        <h3 class = "brieftask"> <p></p>  </h3>
+
+
+        <h3 class = "brieftask"> [ xxx  ]  bootstrap </h3>
+        <h3 class = "brieftask"> [ xxx  ]  css   </h3>
+        <h3 class = "brieftask"> [ xxx     ] html    </h3>
+        <h3 class = "brieftask"> [   xxx   ]  js   </h3>
+
+        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+        <h3 class = "brieftask"> <p></p>  </h3>
+
+
+        <h3 class = "brieftask"> [          ] crud       </h3>
+        <h3 class = "brieftask"> [  XXX       ]  admin    </h3>
+        <h3 class = "brieftask"> [    XXX     ]  password change and reset   </h3>
+
+        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+        <h3 class = "brieftask"> <p></p>  </h3>
+
+
+
+        <h3 class = "brieftask"> [        ]  customer usel model     </h3>
+        <h3 class = "brieftask"> [        ]  1-1 | 1-M | M-M     </h3>
+        <h3 class = "brieftask"> [         ]  user prfole    </h3>
+
+        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+
+        <h3 class = "brieftask"> <p></p>  </h3>
+
+        <h3 class = "brieftask"> [         ]  use of uuid   </h3>
+        <h3 class = "brieftask"> [          ]  static images assets   </h3>
+        <h3 class = "brieftask"> [          ]   image uploads  </h3>
+        <h3 class = "brieftask"> [      ]  search functionality        </h3>
+
+
+        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+
+        <h3 class = "brieftask"> <p></p>  </h3>
+        <h3 class = "brieftask"> [       ] shopping cart basic workings     </h3>
+        <h3 class = "brieftask"> [        ]    shopping cart add items    </h3>
+        <h3 class = "brieftask"> [        ]    shopping cart empty 1 item </h3>
+        <h3 class = "brieftask"> [        ]    shopping cart empty ALL items   </h3>
+
+
+
+        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+
+        <h3 class = "brieftask"> <p></p>  </h3>
+
+        <h3 class = "brieftask"> [          ]  make payment with stripe   </h3>
+        <h3 class = "brieftask"> [          ]  use of django session framework tp manage shop cart  </h3>
+        <h3 class = "brieftask"> [          ]   use of json to pop db   </h3>
+
+
+
+        <h3 class = "brieftask"> <p class = "phase">VALUE ADDED  </p></h3>
+        <h3 class = "brieftask"> <p></p>  </h3>
+
+        <h3 class = "brieftask"> [          ]  app logic in models and views   </h3>
+        <h3 class = "brieftask"> [          ]  dif user types manager,cusomter   </h3>
+        <h3 class = "brieftask"> [          ] advanced search features    </h3>
+        <h3 class = "brieftask"> [          ] a;llow user to make profile    </h3>
+        <h3 class = "brieftask"> [          ] other emmerce features /non commerce feautes  </h3>
+
+        <h3 class = "brieftask"> <p class = "phase">FINAL STAGE </p></h3>
+        <h3 class = "brieftask"> <p></p>  </h3>
+
+        <h3 class = "brieftask"> [          ] upload it pythonanywhere  </h3>
+
+
+
+    </div>
+</div>
+    
 
     
     <body>
