@@ -24,8 +24,17 @@ h1{
     color: red;
 
 }
-
+  #myDiv{
+    overflow: hidden;
+  }
+button{
+  width:100%;
+  background-color: rgb(116, 116, 140);
+  color: #000000;
+}
 .brief{
+
+
 
 font-size: 3em;
 letter-spacing: 20px;
@@ -69,6 +78,10 @@ text-transform: capitalize;
 
 }
 
+#toggleButton {
+  cursor: pointer;
+}
+
 
 .todo{
   background-color: rgba(247, 232, 60, 0.846);
@@ -77,6 +90,17 @@ text-transform: capitalize;
 
 
 }
+
+.collapseExample{
+  background-color: transparent;
+}
+card-body{
+
+
+  background-color: transparent;
+}
+
+
 
 h1,h2,h3{
 color: rgb(255, 251, 251);

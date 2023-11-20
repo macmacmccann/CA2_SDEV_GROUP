@@ -54,4 +54,29 @@ function createObserver(element, animationClass){
 elementsToAnimate.forEach((element) => {
     createObserver(element, 'animate');
 });
+
+var myDiv = document.getElementById("myDiv");
+var toggleButton = document.getElementById("toggleButton");
+
+toggleButton.addEventListener("click", function() {
+    if (myDiv.clientHeight === 0) {
+        myDiv.style.height = "100%"; // Set the height you want when expanded
+        myDiv.querySelector("h3").style.display = "block"; // Set the display value for the content
+        myDiv.querySelector("h1").style.display = "block"; // Set the display value for the content
+        myDiv.querySelector("iframe").style.display = "block"; // Set the display value for the content
+    
+    
+    } else {
+        myDiv.querySelector("h3").style.display = "none"; // Set the display value for the content
+        myDiv.querySelector("h1").style.display = "none"; // Set the display value for the content
+        myDiv.querySelector("iframe").style.display = "none"; // Set the display value for the content
+        myDiv.style.height = "0";
+    }
+});
+
+
+
+
+
+
 });
