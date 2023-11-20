@@ -83,7 +83,7 @@ text-transform: capitalize;
 }
 
 
-.todo{
+.sick_backdrop{
   background-color: rgba(247, 232, 60, 0.846);
   background-image: url("/static/images/todo.gif");
   backdrop-filter: blur(20px);
