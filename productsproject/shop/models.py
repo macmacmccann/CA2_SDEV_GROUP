@@ -39,6 +39,7 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, blank = True, null= True)
     updated = models.DateTimeField(auto_now=True, blank = True, null= True)
+    #cover = models.ImageField(upload_to = 'product', blank = True)
 
     class Meta:
         ordering = ('name',)
@@ -50,3 +51,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+

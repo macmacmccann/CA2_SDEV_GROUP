@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from django.shortcuts import render , get_object_or_404
 from .models import Category,Product 
 from django.core.paginator import Paginator,EmptyPage,InvalidPage
@@ -22,7 +22,7 @@ def prod_list(request,category_id= None):
         page = int(request.GET.get('page', '1'))
     except:
         page = 1
-    try: 
+    try:
         products = paginator.page(page)
     except (EmptyPage,InvalidPage):
         products = paginator.page(paginator.num_pages)
@@ -33,3 +33,16 @@ def prod_list(request,category_id= None):
 def product_detail(request, category_id, product_id):
     product = get_object_or_404(Product, category_id=category_id, id=product_id)
     return render(request, 'shop/product.html', {'product':product})
+
+
+class SearchResultsListView(ListView):
+    model = Product 
+    context_object_name = 'product_list'
+    template_name = 'products/search_results.html'
+    # If i wanted to only show what has "django" in the name value
+    #queryset = Product.objects.filter(name__icontains='Django')
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        return Product.objects.filter(
+            Q(name__icontains='query') | Q(category__icontains='query'))
