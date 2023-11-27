@@ -9,7 +9,6 @@ import stripe
 
 
 
-
 # Create your views here.
 def _cart_id(request):
     cart = request.session.session_key
