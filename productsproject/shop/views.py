@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView, ListView
 from django.shortcuts import render , get_object_or_404
-from .models import Category,Product 
+from shop.models import Category,Product 
 from django.core.paginator import Paginator,EmptyPage,InvalidPage
 
 
@@ -9,6 +9,19 @@ class HomePageView(TemplateView):
 
 class AboutPageView(TemplateView):
     template_name = 'about.html'
+
+
+
+def cat_list(request):
+    categories= Category.objects.all()
+    return render(request, 'shop/category.html', {'cats': categories})
+    
+
+def products_by_category(request, category_id):
+    category= get_object_or_404(Category, id=category_id)
+    products = Product.objects.filter(category=category)
+    return render(request, 'shop/products_by_category.html', {'category': category, 'products': products})
+
 
 def prod_list(request,category_id= None):
     category = None
@@ -28,7 +41,7 @@ def prod_list(request,category_id= None):
         products = paginator.page(paginator.num_pages)
 
 
-    return render( request, 'shop/category.html', {'category':category, 'prods':products})
+    return render( request, 'shop/category.html', {'cats':category, 'prods':products})
 
 def product_detail(request, category_id, product_id):
     product = get_object_or_404(Product, category_id=category_id, id=product_id)

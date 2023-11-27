@@ -15,7 +15,8 @@
   
 
 body{
-    background-color: rgba(162, 170, 170, 0.795);
+
+    background-color: transparent;
 }
 
 
@@ -27,6 +28,106 @@ h1{
   #myDiv{
     overflow: hidden;
   }
+
+
+
+.producttextdiv{
+backdrop-filter: blur(100px);
+    border-radius:20px;
+ background-color: transparent;
+
+
+}
+
+.doubleUp_onThe_Background{
+
+
+    background-color: rgba(60, 60, 99, 0.45);
+    border-radius:20px;
+
+
+}
+.dontConfuseTheText{
+
+
+  backdrop-filter: blur(20px);
+
+}
+
+.aim_blut_at_this{
+
+  background-image: url("/static/images/slow5perc_cmatriX.gif");
+
+}
+
+.glass_plane{
+
+
+
+  backdrop-filter: invert(70%);
+  backdrop-filter: blur(10px);
+
+  border-radius:20px;
+  background-color: rgba(60, 60, 99, 0.148);
+
+}
+
+
+.br_footer{
+  height:500px;
+}
+
+backup{
+
+  background-color: rgba(63, 86, 178, 0.391);
+
+}
+
+form .li{
+  color:initial;
+}
+
+
+
+.my_prod_text{
+
+color: #f5f5f5;
+padding: 5%;
+padding-bottom:100px;
+padding-top:100px;
+background-color: transparent;
+}
+
+
+.productdescdiv{
+  display: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+  padding-bottom:50px;
+  padding-top:50px;
+
+
+}
+
+
+.my_prod_title{
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 5px;
+  padding: 2%;
+  box-shadow: 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+
+}
+
+.my_prod_title_minor{
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin-top:10px;
+
+}
 button{
   width:100%;
   background-color: rgb(116, 116, 140);
@@ -85,7 +186,6 @@ text-transform: capitalize;
 
 .sick_backdrop{
   background-color: rgba(247, 232, 60, 0.846);
-  background-image: url("/static/images/todo.gif");
   backdrop-filter: blur(20px);
 
 
@@ -98,6 +198,41 @@ card-body{
 
 
   background-color: transparent;
+}
+
+.btn-primary{
+
+  width: 500px;
+  color:aqua;
+  background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cartbuttontext{
+    font-size: 2em;
+    font-weight: 900;
+    color: azure;
+    letter-spacing: 3px;
+    margin-top: 0px;
+    margin-bottom:-3px;
+    padding-bottom:5px;
+
+
+}
+
+.imagecontainer{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productimage{
+  width:100%;
 }
 
 
@@ -229,12 +364,11 @@ nav ul li:hover{
   transform: scale(1.1);
 }
 
+
+
 nav ul li {
   padding: 1em;
-
- max-width: 100%;
- 
-
+  max-width: 100%;
 }
 
 nav a {
@@ -252,14 +386,72 @@ nav a {
   
 }
 
-nav a:hover {
-  color: #000000;
-  transition: transform .5s;
-  transform: scale(2);
+/* 
+
+purple
+background-color: rgb(10, 10, 143); 
+
+*/
+
+.productbackground{
+margin-bottom: 10%;
+  background-color: #000000;
+
+  background-image: url("/static/images/slow_cmatrixb.gif");
+
+
+
+}
+
+.br{
+  height:100px;
+}
+
+.blueTheBack{
+
+  background-color: rgba(10, 10, 143, 0.387); 
+  backdrop-filter: blur(5px);
 
 }
 
 
+
+nav a:hover {
+  color: #000000;
+
+
+}
+
+
+
+.prod_name{
+  color:initial;
+  color: white;
+}
+
+.productbanner{
+  background-color: rgba(10, 10, 143, 0.612);
+  height:100px;
+  text-transform: uppercase;
+  font-size: larger;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+
+}
+
+.productbannertext{
+  margin-left:10%;
+}
+.productbanner:hover{
+  background-color: rgb(66, 6, 6);
+}
+
+p{
+  color: aliceblue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 .p2{
 background-color: aliceblue;
 }
@@ -287,9 +479,15 @@ section._box2{
 p{
   
 
-  font-size: xx-large;
+  font-size: medium;
 }
 
+.icon_section{
+   display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
 
   .icon {
   
@@ -300,6 +498,7 @@ p{
     left: 0%;
     width:100px;
     padding: 0%;
+   
   
   
     border-radius: 5px; /* Makes it a circle */
@@ -319,6 +518,12 @@ p{
     margin-bottom: 50px;
     padding: 5%;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.278);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(50px);
+    backdrop-filter: invert(80%);
+     background-color: rgba(4, 4, 135, 0.23);
+
+color: aliceblue;
+
   }
+  
+  

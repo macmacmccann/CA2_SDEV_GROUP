@@ -1,0 +1,29 @@
+
+
+
+   
+    <div class = "aim_blut_at_this">
+        <div class = "glass_plane">
+        
+
+   <nav>
+        <ul>
+            <li><a href="{% url 'shop:all_products' %}">All Products</a></li>
+
+
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+
+            {% for cat in links %}
+            <li><a href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+
+        </div>
+</div>
+
+ 
