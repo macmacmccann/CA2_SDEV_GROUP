@@ -5,14 +5,16 @@ from django.contrib.auth.models import Group
 
 # Register your models here.
 class CustomUserCreationForm(UserCreationForm):
+
+    group = forms.ModelChoiceField(queryset=Group.objects.all(),required=True)
+
     class Meta:
         model = CustomUser
-        fields = UserCreationForm.Meta.fields+('username','email','age',)
-        group = forms.ModelChoiceField(queryset=Group.objects.all(),required=True)
+        fields = UserCreationForm.Meta.fields+('username','email','age','group')
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
         fields = UserCreationForm.Meta.fields
-        fields = UserCreationForm.Meta.fields+('username','email','age',)
+        fields = UserCreationForm.Meta.fields+('username','email','age','group')
 

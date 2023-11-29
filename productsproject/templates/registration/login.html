@@ -2,54 +2,37 @@
 {% extends 'base.html' %}
 
 
-<!DOCTYPE html>
 
-<html>
-
-
-
-
-    <head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
 
         {% block title %}
         <title> Login </title>
         {% endblock title %}
 
-    </head> 
-    <body>
 
 
         {% block content %}
-        <h1> Log In</h1>
-        <form action = "" method= "POST" >
+<div class = "aim_blut_at_this">
+<div class = "glass_plane">
+
+
+<br>
+        <h1 class = "text-primary"> Log In</h1>
+        <form style = "background-color: transparent;" action = "" method= "POST" >
 
             {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value = "Log In"/>
+            {{ form.as_table }}
+            <br>
+            <br>
+            <input  style = "margin-top:35px;"type="submit" class="btn btn-primary" value="Log In" />
 
             </form>
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-      rel="stylesheet" 
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
-      crossorigin="anonymous" /> 
-        <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
-        crossorigin="anonymous" 
+            {% include 'footer.html'    %}
 
-      ></script> 
-]        {% endblock content %}
+  </div>
+</div>
+
+      {% endblock content %}
 
     
-     
 
-       
-        
-      
-    </body>
-</html>
+

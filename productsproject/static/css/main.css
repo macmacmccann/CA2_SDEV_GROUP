@@ -17,6 +17,7 @@
 body{
 
     background-color: transparent;
+    scroll-behavior: smooth; 
 }
 
 
@@ -434,6 +435,7 @@ backdrop-filter: blur(20px);
 
     backdrop-filter: blur(3px);
     flex-direction: column;
+    color: white;
     }
     
     
