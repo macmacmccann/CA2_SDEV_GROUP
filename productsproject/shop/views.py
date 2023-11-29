@@ -2,13 +2,23 @@ from django.views.generic import TemplateView, ListView
 from django.shortcuts import render , get_object_or_404
 from shop.models import Category,Product 
 from django.core.paginator import Paginator,EmptyPage,InvalidPage
-
+from django.views.generic.edit import CreateView
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
 class AboutPageView(TemplateView):
     template_name = 'about.html'
+
+
+
+class CreateProductView(CreateView):
+    model = Product
+    fields = ('name', 'description', 'category', 'price', 'image', 'stock', 'available')
+    template_name = 'shop/new_product.html'
+
+    def get_success_url(self):
+            return reverse('success_url_name')  # Replace 'success_url_name' with the name of your success URL
 
 
 
@@ -59,3 +69,5 @@ class SearchResultsListView(ListView):
         query = self.request.GET.get('q')
         return Product.objects.filter(
             Q(name__icontains='query') | Q(category__icontains='query'))
+
+

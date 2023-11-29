@@ -11,6 +11,7 @@ class Category(models.Model):
         default=uuid.uuid4,
         editable=False)
     name = models.CharField(max_length=250, unique=True)
+    
     description = models.TextField(blank = True)
     image = models.ImageField(upload_to = 'category')
 
@@ -39,7 +40,6 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, blank = True, null= True)
     updated = models.DateTimeField(auto_now=True, blank = True, null= True)
-    #cover = models.ImageField(upload_to = 'product', blank = True)
 
     class Meta:
         ordering = ('name',)

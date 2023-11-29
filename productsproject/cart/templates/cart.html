@@ -52,7 +52,28 @@
                     <div class = "redborder">
 
                           <div class="text-center"> 
-                    <h1 class="text-center my_title"> Your shopping cart  </h1> 
+
+
+                    <nav>
+                        <ul>
+                        <li style = ""><a  style = "display: flex;">
+                            
+                            
+                            <h2 class = "fixcartitle"> YOUR SHOPPING CART  </h2>
+        
+                        {% if item_count > 0 %} 
+                        <div class = "count_circle"> 
+                           <h1 style = "margin-left:10px;">{{item_count}}</h1> </div>
+                           {% endif %}  
+                        </a>  </li> 
+                    </ul>
+                </nav>
+
+                
+
+
+
+
                             </div> 
                  </div>
                
@@ -101,15 +122,12 @@
        </div>
 </div>                       
                                     
-                                    <div class = "removeButton"> 
                                         
                                         &nbsp;<a href="{% url 'cart:cart_remove' cart_item.product.id  %}" class="custom_a"><i
                                             class="fas fa-minus-circle  
                                                 custom_icon"></i></a>&nbsp;
                                             <a href=" {% url 'cart:full_remove' cart_item.product.id %}" class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a> 
                                         
-                                    <button type="button" class="btn btn-danger" id="removeButton">REMOVE JAVA</button>
-                                        </div> 
                                     <td></td> 
                                 {% endif %} 
                             </tr> 

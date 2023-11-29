@@ -1,6 +1,8 @@
+{% load auth_extras %}
 
 
 {% load static %}
+
 
 <!DOCTYPE html>
 
@@ -72,13 +74,14 @@
         {% endif %} 
 -->
 
- <!--               -->
+ <!--              
+
+
+ -->
 
 
 
-
-
-
+ 
 
 
         <header class ="transparent_header">
@@ -100,16 +103,158 @@
             <nav>
                 <ul>
                  <!--   <li><a href="admin/">ADMIN</a></li> STUPIDLY LINKED LINK -->
-                <li><a href="{% url 'admin:index' %}">[]- ADMIN -[]</a></li>
+                <li><a href="{% url 'admin:index' %}">▢ ADMIN ▢</a></li>
                 </ul>
             </nav>
 
-            <nav>
-                <ul>
-                          <p></p> <!--  FILLER -->
-                </ul>
-            </nav>
-        <nav>
+     
+
+ {% for group_for in request.user.groups.all %}
+    {% if group_for.name == 'ADMINISTRATOR_GROUP' %}
+    <div class = "control_centre_banner_topMost">
+
+          
+                 <h3 class = "text-primary" style = "backdrop-filter: blur(20px);">◰ QUICK ADMIN CONTROL CENTER ACTIVATED</h3> 
+    </div>
+{% if user.is_authenticated %} 
+
+<div class = "control_centre_banner"></div>
+                    
+
+                        <div class = "sick_backdrop" id="breifcss"> 
+
+                                <div class = "control_centre_banner">
+
+                            <h1 class = "brief" > ⟤ BREIF </h1>
+   </div>
+
+                        <button class="btnbreif btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            ⧉ OPEN BREIF
+                            </button>
+
+
+                        <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+
+ </div>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/n61ULEU7CO0?si=jj_I2aSobtIXx2B7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+                        <div class = "sick_backdrop" id="myDiv"> 
+
+                            <h3 class = "brieftask"> <p class = "phase">FIRST STAGE </p></h3>
+                            <h3 class = "brieftask"> <p></p>  </h3>
+
+
+                            <h3 class = "brieftask"> [ xxx  ]  bootstrap </h3>
+                            <h3 class = "brieftask"> [ xxx  ]  css   </h3>
+                            <h3 class = "brieftask"> [ xxx   ] html    </h3>
+                            <h3 class = "brieftask"> [ xxx   ]  js   </h3>
+
+
+                        </div>
+
+                        <div class = "sick_backdrop" id="myDiv"> 
+
+                            <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+                            <h3 class = "brieftask"> <p></p>  </h3>
+
+
+                            <h3 class = "brieftask"> [          ] crud       </h3>
+                            <h3 class = "brieftask"> [  XXX       ]  admin    </h3>
+                            <h3 class = "brieftask"> [    XXX     ]  password change and reset   </h3>
+
+
+                        </div>
+                            <div class = "sick_backdrop" id="myDiv"> 
+
+
+
+                            <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+                            <h3 class = "brieftask"> <p></p>  </h3>
+
+
+
+                            <h3 class = "brieftask"> [        ]  customer usel model     </h3>
+                            <h3 class = "brieftask"> [        ]  1-1 | 1-M | M-M     </h3>
+                            <h3 class = "brieftask"> [         ]  user prfole    </h3>
+
+
+                        </div>
+                            <div class = "sick_backdrop" id="myDiv"> 
+
+                            <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+
+                            <h3 class = "brieftask"> <p></p>  </h3>
+
+                            <h3 class = "brieftask"> [   xxx   ]  use of uuid [yes on categories]  </h3>
+                            <h3 class = "brieftask"> [  xxx ]  static images assets[yes on header]   </h3>
+                            <h3 class = "brieftask"> [  xxx ]   image uploads[yes on products]  </h3>
+                            <h3 class = "brieftask"> [      ]  search functionality        </h3>
+                        </div>
+                            <div class = "sick_backdrop" id="myDiv"> 
+
+                            <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+
+                            <h3 class = "brieftask"> <p></p>  </h3>
+                            <h3 class = "brieftask"> [   xxx    ] shopping cart basic workings     </h3>
+                            <h3 class = "brieftask"> [  xxx      ]    shopping cart add items    </h3>
+                            <h3 class = "brieftask"> [ xxx      ]    shopping cart empty 1 item </h3>
+                            <h3 class = "brieftask"> [  xxx      ]    shopping cart empty ALL items   </h3>
+
+                        </div>
+                            <div class = "sick_backdrop" id="myDiv"> 
+
+                            <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
+
+                            <h3 class = "brieftask"> <p></p>  </h3>
+
+                            <h3 class = "brieftask"> [          ]  make payment with stripe   </h3>
+                            <h3 class = "brieftask"> [          ]  use of django session framework tp manage shop cart  </h3>
+                            <h3 class = "brieftask"> [          ]   use of json to pop db   </h3>
+                            </div>
+                            <div class = "sick_backdrop" id="myDiv"> 
+
+
+                            <h3 class = "brieftask"> <p class = "phase">VALUE ADDED  </p></h3>
+                            <h3 class = "brieftask"> <p></p>  </h3>
+
+                            <h3 class = "brieftask"> [          ]  app logic in models and views   </h3>
+                            <h3 class = "brieftask"> [          ]  dif user types manager,cusomter   </h3>
+                            <h3 class = "brieftask"> [          ] advanced search features    </h3>
+                            <h3 class = "brieftask"> [          ] a;llow user to make profile    </h3>
+                            <h3 class = "brieftask"> [          ] other emmerce features /non commerce feautes  </h3>
+
+                            </div>
+                            <div class = "sick_backdrop" id="myDiv"> 
+
+                            <h3 class = "brieftask"> <p class = "phase">FINAL STAGE </p></h3>
+                            <h3 class = "brieftask"> <p></p>  </h3>
+
+                            <h3 class = "brieftask"> [          ] upload it pythonanywhere  </h3>
+
+                            </div>
+                            <button class="btnbreif btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                ⧉ CLOSE BREIF
+                                </button>
+    
+                        {% endif    %}  
+                        </div>
+
+
+                                </div>
+
+                     
+
+
+
+
+    {% elif group_for.name == 'Sellers' %}
+        Text showed to users in group 'Sellers'
+    {% endif %}
+{% endfor %}
+
 
 
         <nav>
@@ -131,7 +276,7 @@
 
                 {% if item_count > 0 %} 
                 <div class = "count_circle"> 
-                   <h1 style = "margin-left:10px;">{{item_count}}</h1> </div>
+                   <h1 style = "margin-left:11px;">{{item_count}}</h1> </div>
                    {% endif %}  
                 </a>  </li> 
             </ul>
@@ -207,125 +352,6 @@
     
     </div>
 
-     
-    {% if user.is_authenticated %} 
-  
-
-
-
-
-    <div class = "sick_backdrop" id="myDiv"> 
-        <h1 class = "brief" >[[ BREIF ]]</h1>
-
-     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-           OPEN BREIF
-          </button>
-
-
- <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/n61ULEU7CO0?si=jj_I2aSobtIXx2B7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-
-<div class = "sick_backdrop" id="myDiv"> 
-
-        <h3 class = "brieftask"> <p class = "phase">FIRST STAGE </p></h3>
-        <h3 class = "brieftask"> <p></p>  </h3>
-
-
-        <h3 class = "brieftask"> [ xxx  ]  bootstrap </h3>
-        <h3 class = "brieftask"> [ xxx  ]  css   </h3>
-        <h3 class = "brieftask"> [ xxx     ] html    </h3>
-        <h3 class = "brieftask"> [   xxx   ]  js   </h3>
-
-
-</div>
-
-<div class = "sick_backdrop" id="myDiv"> 
-
-        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
-        <h3 class = "brieftask"> <p></p>  </h3>
-
-
-        <h3 class = "brieftask"> [          ] crud       </h3>
-        <h3 class = "brieftask"> [  XXX       ]  admin    </h3>
-        <h3 class = "brieftask"> [    XXX     ]  password change and reset   </h3>
-
-
-</div>
-        <div class = "sick_backdrop" id="myDiv"> 
-
-
-
-        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
-        <h3 class = "brieftask"> <p></p>  </h3>
-
-
-
-        <h3 class = "brieftask"> [        ]  customer usel model     </h3>
-        <h3 class = "brieftask"> [        ]  1-1 | 1-M | M-M     </h3>
-        <h3 class = "brieftask"> [         ]  user prfole    </h3>
-
-
-</div>
-        <div class = "sick_backdrop" id="myDiv"> 
-
-        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
-
-        <h3 class = "brieftask"> <p></p>  </h3>
-
-        <h3 class = "brieftask"> [   xxx   ]  use of uuid [yes on categories]  </h3>
-        <h3 class = "brieftask"> [  xxx ]  static images assets[yes on header]   </h3>
-        <h3 class = "brieftask"> [  xxx ]   image uploads[yes on products]  </h3>
-        <h3 class = "brieftask"> [      ]  search functionality        </h3>
-</div>
-        <div class = "sick_backdrop" id="myDiv"> 
-
-        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
-
-        <h3 class = "brieftask"> <p></p>  </h3>
-        <h3 class = "brieftask"> [       ] shopping cart basic workings     </h3>
-        <h3 class = "brieftask"> [        ]    shopping cart add items    </h3>
-        <h3 class = "brieftask"> [        ]    shopping cart empty 1 item </h3>
-        <h3 class = "brieftask"> [        ]    shopping cart empty ALL items   </h3>
-
-</div>
-        <div class = "sick_backdrop" id="myDiv"> 
-
-        <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
-
-        <h3 class = "brieftask"> <p></p>  </h3>
-
-        <h3 class = "brieftask"> [          ]  make payment with stripe   </h3>
-        <h3 class = "brieftask"> [          ]  use of django session framework tp manage shop cart  </h3>
-        <h3 class = "brieftask"> [          ]   use of json to pop db   </h3>
-        </div>
-        <div class = "sick_backdrop" id="myDiv"> 
-
-
-        <h3 class = "brieftask"> <p class = "phase">VALUE ADDED  </p></h3>
-        <h3 class = "brieftask"> <p></p>  </h3>
-
-        <h3 class = "brieftask"> [          ]  app logic in models and views   </h3>
-        <h3 class = "brieftask"> [          ]  dif user types manager,cusomter   </h3>
-        <h3 class = "brieftask"> [          ] advanced search features    </h3>
-        <h3 class = "brieftask"> [          ] a;llow user to make profile    </h3>
-        <h3 class = "brieftask"> [          ] other emmerce features /non commerce feautes  </h3>
-
-        </div>
-        <div class = "sick_backdrop" id="myDiv"> 
-
-        <h3 class = "brieftask"> <p class = "phase">FINAL STAGE </p></h3>
-        <h3 class = "brieftask"> <p></p>  </h3>
-
-        <h3 class = "brieftask"> [          ] upload it pythonanywhere  </h3>
-
-        </div>
-
-  {% endif    %}  
   </div>
  
 

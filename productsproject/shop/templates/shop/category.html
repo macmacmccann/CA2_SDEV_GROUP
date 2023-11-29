@@ -31,12 +31,12 @@ Coding Courses{% endif %}
     <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
 </div> <br>
 <div>
-    <h1 class="text-center my_title ">{{category.name}}</h1>
+    <h1 class="text-center my_title ">{{cat.name}}</h1>
     <p class="text-justify">{{category.description}}</p>
 </div> {% else %}
 <img class="my_image my_image_padding" src="{% static 'images/banner.jpg' %}" > </div> <br>
 <div>
-    <h1 class="text-center my_prod_title">Categories</h1>
+    <h1 class="text-center my_prod_title">{{cats.name}}</h1>
     <p class="text-justify">
 
     </p>
@@ -44,10 +44,14 @@ Coding Courses{% endif %}
 
 <div class="container">
     <div class="row mx-auto">
-        <h1>Category List</h1>
-        {% for categories in links %}
-            <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
-                <p>{{ cat.name }}</p>
+
+    <div class = "productdescdiv">
+       <p> {{ cats.description }}</p>         
+       </div>
+
+                {% for product in prods %}
+            <div class="top_price col-9 col-lg-4 col-sm-12 col-md-4">
+                <p>{{product.price}}</p>
             </div>
         {% endfor %}
     </div>
