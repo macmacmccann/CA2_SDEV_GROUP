@@ -32,13 +32,7 @@ h1{
 
 
 
-.producttextdiv{
-backdrop-filter: blur(0px);
- background-color: transparent;
- padding:50px;
 
-
-}
 
 .doubleUp_onThe_Background{
 
@@ -49,6 +43,92 @@ backdrop-filter: blur(0px);
 
 }
 
+.form-control.me-2{
+  background-color: transparent;
+}
+
+.rownav{
+  display:row;
+  flex-direction: row;
+  width:50vw;
+  justify-content: center;
+  align-items: center;
+margin:0;
+padding:2px;
+}
+
+.btnsearch{
+  width:30vw;
+}
+
+
+
+.orderthanks{
+
+
+  text-transform: uppercase;
+  display: grid;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter:invert(100%);
+
+  width: 50vw;
+  height: 40ww;
+  border-radius:60px 10px 60px 10px;
+  margin:30px;
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+
+
+}
+
+.searchresultans{
+
+
+  text-transform: uppercase;
+  display: grid;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter:invert(100%);
+
+  width: 30vw;
+  height: 50ww;
+  border-radius:60px 10px 60px 10px;
+  margin:30px;
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+
+
+}
+
+.searchresultans:hover{
+
+  background-color: rgba(240, 248, 255, 0.531);
+}
+
+.images_searches{
+  width: 100%;
+}
+
+.search_result_link{
+margin-top: 25px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+
+}
+
+.search_result_link:hover{
+  margin-top: 25px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+  
+  }
+.access_limited{
+  background-color: red;
+  display:grid;
+  align-items: center;
+  height:100px;
+}
 
 .my_custom_table{
 
@@ -135,11 +215,17 @@ form .li{
 .my_prod_text{
 
 color: #f5f5f5;
-padding: 5%;
-padding-bottom:100px;
-padding-top:100px;
+padding: 0%;
+
 background-color: transparent;
-backdrop-filter: blur(20px);
+
+
+}
+
+
+.producttextdiv{
+ background-color: transparent;
+ padding:50px;
 
 
 }
@@ -148,12 +234,45 @@ backdrop-filter: blur(20px);
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
-  padding-bottom:50px;
-  padding-top:50px;
-align-items: center;
-justify-content: center;
+  padding-bottom:20px;
+  padding-top:20px;
+
+
+border-radius: 60px 20px 60px 20px;
 }
 
+
+
+.force_row{
+
+  display: inline-grid;
+  grid-template-columns: auto auto auto;}
+.prod_cont{
+
+
+}
+.prod_list_card{
+color: azure;
+  background-color: rgba(98, 98, 110, 0.497);
+
+  backdrop-filter:blur(50px);
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+  border-radius: 60px 20px 60px 20px;
+
+  width:500px;
+  padding:10px;
+
+}
+
+.card-body{
+  background-color: transparent;
+
+}
+.card{
+  background-color: transparent;
+border-radius: 50px;
+
+}
 
 .top_price{
   background-color: aliceblue;
@@ -195,14 +314,40 @@ box-shadow: inset 0 0 10px 5px rgba(124, 28, 28, 0.5); /* Blurred border effect 
 .my_title{
   padding:50px
 }
+.my_prod_titlediv{
+ display: flex;
+  padding: 2%;
+
+  width:100vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.category_image{
+  width:95%;
+  border-radius: 60px 10px 60px 10px;
+  height:20vw;
+
+}
+
+
 .my_prod_title{
-  color: aliceblue;
+  box-shadow:inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+    border-radius: 30px 5px 30px 5px;
+
+  width: 100%;
+  padding:50px 80px 50px 80px;
+  backdrop-filter: blur(50px);
+  margin:5px;
+
+
+   color: aliceblue;
   text-transform: uppercase;
   font-size: 3em;
   letter-spacing: 5px;
-  padding: 2%;
-  box-shadow:inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
-
 }
 
 .my_prod_title_minor{

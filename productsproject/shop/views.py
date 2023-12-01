@@ -3,6 +3,7 @@ from django.shortcuts import render , get_object_or_404
 from shop.models import Category,Product 
 from django.core.paginator import Paginator,EmptyPage,InvalidPage
 from django.views.generic.edit import CreateView
+from django.db.models import Q
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
@@ -60,14 +61,12 @@ def product_detail(request, category_id, product_id):
 
 class SearchResultsListView(ListView):
     model = Product 
-    context_object_name = 'product_list'
+    context_object_name = 'prod_list'
     template_name = 'products/search_results.html'
-    # If i wanted to only show what has "django" in the name value
-    #queryset = Product.objects.filter(name__icontains='Django')
+
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        return Product.objects.filter(
-            Q(name__icontains='query') | Q(category__icontains='query'))
-
+        return Product.objects.filter( Q(name__icontains=query) | Q(category__name__icontains=query))
+           # Product.objects.filter(name__icontains='Python')
 

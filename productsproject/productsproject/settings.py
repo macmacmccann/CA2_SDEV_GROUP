@@ -20,9 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-STRIPE_SECRET_KEY = 'django-insecure-=udfgdfghdfgdfghdghdfgh'
-SECRET_KEY = 'django-insecure-=udfgdfghdfgdfghdghdfgh'
+
+
+STRIPE_SECRET_KEY = 'sk_test_51OD8UTDHkEen7hhUPwkVxuyeQI8GDVT4lNWrwE4ycAJm9KiZKZ2mJbf8OoXEJ8vJWF4f9RuVLPyROIAPNlU7ARah00S4JJqzbG'
+
+SECRET_KEY = 'sk_test_51OD8UTDHkEen7hhUPwkVxuyeQI8GDVT4lNWrwE4ycAJm9KiZKZ2mJbf8OoXEJ8vJWF4f9RuVLPyROIAPNlU7ARah00S4JJqzbG'
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51OD8UTDHkEen7hhUbrWvUbq8hELK8H2QAzmh7VZFFB7cnnNjsUe2PV4IUcYqYplf5zvntF2yrLL4E7hV76dIG1Ss00nMMSyYMO'
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  True
@@ -42,7 +47,7 @@ INSTALLED_APPS = [
     'accounts',
     'cart',
     'stripe',
-    #'order'
+    'order',
 
     # Third Party
     'crispy_forms',

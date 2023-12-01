@@ -33,6 +33,8 @@ const elementsToAnimate = [
     ...document.querySelectorAll('.icon'),
     ...document.querySelectorAll('a'),
     ...document.querySelectorAll('whoamI'),
+    ...document.querySelectorAll('searchresultans'),
+
 
 
 

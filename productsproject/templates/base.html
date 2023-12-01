@@ -94,10 +94,15 @@
  <br></br>
      
 
-    <section class = "icon_section"> 
+    <section class = "icon_section">
  <img class ="icon" src="{% static 'images/icon.png' %}"></section>
        <br></br>
            
+
+
+
+
+
 
 
             <nav>
@@ -116,7 +121,6 @@
           
                  <h3 class = "text-primary" style = "backdrop-filter: blur(20px);">◰ QUICK ADMIN CONTROL CENTER ACTIVATED</h3> 
     </div>
-{% if user.is_authenticated %} 
 
 <div class = "control_centre_banner"></div>
                     
@@ -147,10 +151,9 @@
                             <h3 class = "brieftask"> <p></p>  </h3>
 
 
-                            <h3 class = "brieftask"> [ xxx  ]  bootstrap </h3>
-                            <h3 class = "brieftask"> [ xxx  ]  css   </h3>
-                            <h3 class = "brieftask"> [ xxx   ] html    </h3>
-                            <h3 class = "brieftask"> [ xxx   ]  js   </h3>
+                            <h3 class = "brieftask"> [ yes on a few things ]  bootstrap </h3>
+                            <h3 class = "brieftask"> [ yes on most things ]  css   </h3>
+                            <h3 class = "brieftask"> [ yes works -used for animations  ]  js   </h3>
 
 
                         </div>
@@ -161,9 +164,9 @@
                             <h3 class = "brieftask"> <p></p>  </h3>
 
 
-                            <h3 class = "brieftask"> [          ] crud       </h3>
-                            <h3 class = "brieftask"> [  XXX       ]  admin    </h3>
-                            <h3 class = "brieftask"> [    XXX     ]  password change and reset   </h3>
+                            <h3 class = "brieftask"> [   shopping cart       ] crud       </h3>
+                            <h3 class = "brieftask"> [  yes       ]  admin    </h3>
+                            <h3 class = "brieftask"> [    yes works -page for it specifically     ]  password change and reset   </h3>
 
 
                         </div>
@@ -176,8 +179,8 @@
 
 
 
-                            <h3 class = "brieftask"> [        ]  customer usel model     </h3>
-                            <h3 class = "brieftask"> [        ]  1-1 | 1-M | M-M     </h3>
+                            <h3 class = "brieftask"> [    yes you have your a few things added to what makes a user eg.,groups     ]  customer user model     </h3>
+                            <h3 class = "brieftask"> [   category -> products      ]  1-1 | 1-M | M-M     </h3>
                             <h3 class = "brieftask"> [         ]  user prfole    </h3>
 
 
@@ -188,20 +191,20 @@
 
                             <h3 class = "brieftask"> <p></p>  </h3>
 
-                            <h3 class = "brieftask"> [   xxx   ]  use of uuid [yes on categories]  </h3>
-                            <h3 class = "brieftask"> [  xxx ]  static images assets[yes on header]   </h3>
-                            <h3 class = "brieftask"> [  xxx ]   image uploads[yes on products]  </h3>
-                            <h3 class = "brieftask"> [      ]  search functionality        </h3>
+                            <h3 class = "brieftask"> [  [yes on categories]    ]  use of uuid </h3>
+                            <h3 class = "brieftask"> [  [yes on everything] ]  static images assets  </h3>
+                            <h3 class = "brieftask"> [  yes through admin  ]   image uploads[yes on products]  </h3>
+                            <h3 class = "brieftask"> [    yes on product name and categroy name   ]  search functionality        </h3>
                         </div>
                             <div class = "sick_backdrop" id="myDiv"> 
 
                             <h3 class = "brieftask"> <p class = "phase">NEXT STAGE </p></h3>
 
                             <h3 class = "brieftask"> <p></p>  </h3>
-                            <h3 class = "brieftask"> [   xxx    ] shopping cart basic workings     </h3>
-                            <h3 class = "brieftask"> [  xxx      ]    shopping cart add items    </h3>
-                            <h3 class = "brieftask"> [ xxx      ]    shopping cart empty 1 item </h3>
-                            <h3 class = "brieftask"> [  xxx      ]    shopping cart empty ALL items   </h3>
+                            <h3 class = "brieftask"> [   yes    ] shopping cart basic workings     </h3>
+                            <h3 class = "brieftask"> [  yes    ]    shopping cart add items    </h3>
+                            <h3 class = "brieftask"> [ yes     ]    shopping cart empty 1 item </h3>
+                            <h3 class = "brieftask"> [  yes   ]    shopping cart empty ALL items   </h3>
 
                         </div>
                             <div class = "sick_backdrop" id="myDiv"> 
@@ -221,7 +224,7 @@
                             <h3 class = "brieftask"> <p></p>  </h3>
 
                             <h3 class = "brieftask"> [          ]  app logic in models and views   </h3>
-                            <h3 class = "brieftask"> [          ]  dif user types manager,cusomter   </h3>
+                            <h3 class = "brieftask"> [yes ADMINSTORGROUP and BUYER  - buyer limited - explitictly shows this fact   ]  dif user types manager,cusomter   </h3>
                             <h3 class = "brieftask"> [          ] advanced search features    </h3>
                             <h3 class = "brieftask"> [          ] a;llow user to make profile    </h3>
                             <h3 class = "brieftask"> [          ] other emmerce features /non commerce feautes  </h3>
@@ -238,22 +241,25 @@
                             <button class="btnbreif btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                 ⧉ CLOSE BREIF
                                 </button>
-    
-                        {% endif    %}  
-                        </div>
-
-
-                                </div>
+                                    </div>
+                             </div>
 
                      
 
+    {% elif group_for.name == 'BUYER' %}
+    <h1>Look at our shop</h1>
 
+    <div class ="access_limited">
 
+        <h1> Your a basic user.Access is limited to only viewing.  </h1>
 
-    {% elif group_for.name == 'Sellers' %}
-        Text showed to users in group 'Sellers'
+    </div>
+
     {% endif %}
+
 {% endfor %}
+
+
 
 
 
@@ -359,8 +365,26 @@
 
     </div>
 
+
+    <div class = "aim_blut_at_this">
+        <div class = "glass_plane">
+      
+
         {% include 'navbar.html' %} 
-    
+        <nav style = "background-color: transparent;">
+        <ul style = "background-color: transparent;">
+
+
+
+<form style = "background-color: transparent;"class="rownav" action="{% url 'shop:search_results' %}" method ="get"> 
+<input name = "q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">        
+<button class="btnsearch btn-outline-secondary" type="submit">Search</button>  
+</form>   
+        </ul>
+    </nav>
+        </div>
+</div>
+
         {% block content %}
         {% endblock content %}
 
