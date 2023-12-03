@@ -288,9 +288,17 @@ background-color: transparent;
 
 
 border-radius: 60px 20px 60px 20px;
+color:white;
 }
 
+.holdtext_centre{
 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 248, 255, 0.472);
+
+}
 
 .force_row{
 
@@ -298,15 +306,17 @@ border-radius: 60px 20px 60px 20px;
   grid-template-columns: auto auto auto;}
 
 .prod_list_card{
-color: azure;
-  background-color: rgba(98, 98, 110, 0.497);
 
-  backdrop-filter:blur(50px);
+
+  color: azure;
+  background-color: rgba(86, 244, 255, 0.63);
+  backdrop-filter:invert(50%);
   box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
   border-radius: 60px 20px 60px 20px;
-
-  width:500px;
+  width:80%;
   padding:10px;
+  margin:30px;
+
 
 }
 

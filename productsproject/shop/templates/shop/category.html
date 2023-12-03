@@ -50,13 +50,13 @@ Coding Courses{% endif %}
 
         <div class="prod_list_card ">
 
-                <a class="img" href="{{product.get_absolute_url}}"><img class="category_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
+                <a class="img" href="{{product.get_absolute_url}}"><img class="category_image" src="{{product.image.url}}" alt="{{product.name}}">
 
                     <h4>{{product.name}}</h4>
-                    <p style="color: black;">€{{product.price}}</p>
+                    <p style="color: black;">€{{product.price}}</p>  </a>
                 </div>
 </div>
-        
+      
         {% endfor %} 
        </div>
 

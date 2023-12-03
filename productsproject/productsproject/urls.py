@@ -28,5 +28,7 @@ urlpatterns = [
     path('custom-accounts/', include('accounts.urls')),  # Your custom account URLs
     path('accounts/', include('django.contrib.auth.urls')),
     path('order/',include('order.urls')),
+    path('search/',include('search.urls')),
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

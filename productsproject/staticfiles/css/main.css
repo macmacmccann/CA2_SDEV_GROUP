@@ -1,0 +1,838 @@
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+.animate {
+    animation: fadeIn 2s ease-in forwards;
+  }
+  
+
+body{
+
+    background-color: transparent;
+    scroll-behavior: smooth; 
+}
+
+
+h1{
+
+    color: red;
+
+}
+  #myDiv{
+    overflow: hidden;
+  }
+
+
+
+
+
+.doubleUp_onThe_Background{
+
+
+    background-color: rgba(60, 60, 99, 0.45);
+    border-radius:20px;
+
+
+}
+
+.form-control.me-2{
+  background-color: transparent;
+}
+
+.rownav{
+  display:row;
+  flex-direction: row;
+  width:50vw;
+  justify-content: center;
+  align-items: center;
+margin:0;
+padding:2px;
+}
+
+.btnsearch{
+  width:30vw;
+}
+
+
+
+.orderthanks{
+
+
+  text-transform: uppercase;
+  display: grid;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter:invert(100%);
+
+  width: 50vw;
+  height: 40ww;
+  border-radius:60px 10px 60px 10px;
+  margin:30px;
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+
+
+}
+
+
+.btnavail{
+  width:70vw;
+}
+.searchresultans{
+
+
+  text-transform: uppercase;
+  display: grid;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter:invert(100%);
+
+  width: 30vw;
+  height: 50ww;
+  border-radius:60px 10px 60px 10px;
+  margin:30px;
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+
+
+}
+
+.searchresultans:hover{
+
+  background-color: rgba(240, 248, 255, 0.531);
+}
+
+.images_searches{
+  width: 100%;
+}
+
+.search_result_link{
+margin-top: 25px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+
+}
+
+
+.profile_pic_wrapper{
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.082);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.158); /* Blurred border effect */
+  backdrop-filter: blur(20px);
+
+  color:white; text-transform:uppercase;
+  margin-top:10px;
+  backdrop-filter:blur(50px);
+}
+.profile_pic{
+  border-radius: 300px;
+  height:300px;
+}
+
+.adminonline{
+
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search_result_link:hover{
+  margin-top: 25px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+  
+  }
+.access_limited{
+  background-color: red;
+  display:grid;
+  align-items: center;
+  height:100px;
+}
+
+
+
+.online_dot{
+
+  background-color: aquamarine;
+  border-radius: 40px;
+  height:30px;
+  width:30px;
+}
+.offline_dot{
+
+  background-color: rgb(212, 16, 25);
+  border-radius: 40px;
+  height:30px;
+  width:30px;
+}
+
+
+.my_custom_table{
+
+  background-color: #000000;
+}
+
+.my_custom_thead{
+
+  background-color: #000000;
+
+}
+
+th{
+  background-color: #000000;
+
+}
+
+.cartimage{
+ width:50%;
+}
+
+
+.dontConfuseTheText{
+
+
+  backdrop-filter: blur(20px);
+
+}
+
+.aim_blut_at_this{
+
+  background-image: url("/static/images/slow5perc_cmatriX.gif");
+
+}
+
+
+.custom_a{
+
+  color: #000000;
+}
+
+.custom_icon{
+  color: #000000;
+}
+
+
+.removeButton{
+
+ 
+  background-color: #000000;
+}
+.glass_plane{
+
+
+
+  backdrop-filter: invert(70%);
+  backdrop-filter: blur(10px);
+
+  border-radius:20px;
+  background-color: rgba(60, 60, 99, 0.148);
+
+}
+.fixcartitle{
+  margin-top: 10px;
+  color: #f5f5f5;
+}
+
+.br_footer{
+  height:500px;
+}
+
+backup{
+
+  background-color: rgba(63, 86, 178, 0.391);
+
+}
+
+form .li{
+  color:initial;
+}
+
+
+
+.my_prod_text{
+
+color: #f5f5f5;
+padding: 0%;
+
+background-color: transparent;
+
+
+}
+
+
+.producttextdiv{
+ background-color: transparent;
+ padding:50px;
+
+
+}
+.productdescdiv{
+  display: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+  padding-bottom:20px;
+  padding-top:20px;
+
+
+border-radius: 60px 20px 60px 20px;
+}
+
+
+
+.force_row{
+
+  display: inline-grid;
+  grid-template-columns: auto auto auto;}
+
+.prod_list_card{
+
+
+  color: azure;
+  background-color: rgba(86, 244, 255, 0.63);
+  backdrop-filter:invert(50%);
+  box-shadow: inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+  border-radius: 60px 20px 60px 20px;
+  width:80%;
+  padding:10px;
+  margin:30px;
+
+
+}
+
+.card-body{
+  background-color: transparent;
+
+}
+.card{
+  background-color: transparent;
+border-radius: 50px;
+
+}
+
+.top_price{
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin:20px;
+
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:2px;
+}
+
+
+.count_circle{
+
+
+  background-color: rgb(188, 156, 252);
+  color:rgb(11, 3, 3);
+  font-weight: bold;
+  font-size: larger;
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top:5px;
+}
+.redborder{
+
+background-color: rgba(58, 7, 58, 0.548);
+box-shadow: inset 0 0 10px 5px rgba(124, 28, 28, 0.5); /* Blurred border effect */
+
+
+}
+
+
+
+.my_title{
+  padding:50px
+}
+.my_prod_titlediv{
+ display: flex;
+  padding: 2%;
+
+  width:100vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.category_image{
+  width:95%;
+  border-radius: 60px 10px 60px 10px;
+  height:20vw;
+
+}
+
+
+.my_prod_title{
+  box-shadow:inset 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+    border-radius: 30px 5px 30px 5px;
+
+  width: 100%;
+  padding:50px 80px 50px 80px;
+  backdrop-filter: blur(50px);
+  margin:5px;
+
+
+   color: aliceblue;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 5px;
+}
+
+.my_prod_title_minor{
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin-top:10px;
+
+}
+button{
+  width:100%;
+  background-color: rgb(116, 116, 140);
+  color: #000000;
+}
+.btnbreif.btn-success{
+
+width:100vw;
+height: 10vw;
+margin-top:-10px;
+
+
+}
+
+
+.btnbreif.btn-danger{
+
+  width:100vw;
+  height: 10vw;
+  margin-top:-10px;
+  
+  
+  }
+
+.control_centre_banner_topMost{
+
+width:100vw;
+height: 20vw;
+
+background-image: url("/static/images/matrix_banner.jpg");
+justify-content: center;
+align-items: center;
+display: flex;
+background-repeat: repeat-y;
+}
+
+.control_centre_banner{
+  background-image: url("/static/images/works1.gif");
+
+}
+.brief{
+
+background-color: transparent;
+
+font-size: 3em;
+letter-spacing: 20px;
+color: white;
+padding-top: 50px;
+padding-bottom: 75px;
+
+
+
+
+}
+.brieftask{
+  color: #000000;
+  font-size: 2em;
+text-transform: capitalize;
+
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 0, 0.268);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 1px;
+  margin-bottom: -1px;
+
+
+
+}
+.phase{
+  background-color: rgba(255, 240, 250, 0.79);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(90, 54, 10);
+}
+
+.backdrop_control{
+
+  backdrop-filter: blur(20px);
+
+
+
+}
+
+#toggleButton {
+  cursor: pointer;
+}
+
+
+.sick_backdrop{
+  backdrop-filter: blur(20px);
+
+
+}
+
+.collapseExample{
+  background-color: transparent;
+}
+card-body{
+
+
+  background-color: transparent;
+}
+
+.btn-primary{
+
+  width: 500px;
+  color:aqua;
+  background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cartbuttontext{
+    font-size: 2em;
+    font-weight: 900;
+    color: azure;
+    letter-spacing: 3px;
+    margin-top: 0px;
+    margin-bottom:-3px;
+    padding-bottom:5px;
+
+
+}
+
+.imagecontainer{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productimage{
+  width:100%;
+}
+
+
+
+h1,h2,h3{
+color: rgb(255, 251, 251);
+text-align: center;
+text-transform: capitalize;
+ text-shadow: 2px  #131111;
+ letter-spacing: 15PX;
+ text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+
+}
+
+.whoamI{
+
+    text-align: center;
+    color: white;
+    size: 2em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    backdrop-filter: blur(20px);
+    background-color: rgba(171, 173, 175, 0.425);
+    
+
+}
+
+.whoamI:hover{
+    background-color: rgba(171, 173, 175, 0.425);
+}
+
+.whoamIlogged{
+
+    letter-spacing: 5px;;
+    text-align: center;
+    color: rgb(250, 132, 132);
+    size: 2em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    backdrop-filter: blur(20px);
+    background-color: rgba(160, 57, 74, 0.425);
+    
+
+}
+
+a.whoamI{
+    text-decoration: none;
+    font: bolder;
+    text-align: center;
+    letter-spacing: 20px;
+    margin-left: 40%;
+    size: 2em;
+}
+
+
+
+
+nav {
+  background-color: rgba(255, 252, 252, 0.144);
+/*  background-image: url("/img/broken_glass.jpg");*/
+z-index: 1;
+backdrop-filter: blur(20px);
+}
+
+
+
+.header_contains_image_cleanly{
+
+    height: 10%;
+    background-position:  center; 
+    background-size: 100% auto;
+    background-repeat:repeat; 
+    background-image: url("/static/images/main.jpg");
+  
+  
+}
+
+
+
+.main_website_name_row {
+
+    backdrop-filter: blur(3px);
+    flex-direction: column;
+    color: white;
+    }
+    
+    
+    
+    .main_website_name_text {
+      letter-spacing: 15px;
+      animation: fadeIn 4s ease-in forwards;
+      backdrop-filter: blur(20px);
+    
+    
+    }
+    
+    .main_website_name_text_2 {
+      letter-spacing: 15px;
+      animation: fadeIn 4s ease-in forwards;
+      backdrop-filter: blur(20px);
+      font-size: small;
+    
+    }
+    .main_website_name_text_3 {
+      letter-spacing: 15px;
+      animation: fadeIn 4s ease-in forwards;
+      backdrop-filter: blur(20px);
+      background-color: rgba(240, 248, 255, 0.334);
+    
+    }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  justify-content: space-evenly; 
+  transform: scale(1.1);
+}
+
+nav ul:hover{
+background-color: rgba(240, 248, 255, 0.192);
+}
+
+
+nav ul li:hover{
+  transition: transform .1s;
+  transform: scale(1.1);
+}
+
+
+
+nav ul li {
+  padding: 1em;
+  max-width: 100%;
+}
+
+nav a {
+  animation: 1s ease-in forwards;
+  font-size: larger;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  transition: all .6s;
+  text-transform: full-width;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  
+
+
+  
+}
+
+/* 
+
+purple
+background-color: rgb(10, 10, 143); 
+
+*/
+
+.productbackground{
+margin-bottom: 10%;
+  background-color: #000000;
+
+  background-image: url("/static/images/slow_cmatrixb.gif");
+
+
+
+}
+
+.br{
+  height:100px;
+}
+
+.blueTheBack{
+
+  background-color: rgba(10, 10, 143, 0.387); 
+  backdrop-filter: blur(5px);
+
+}
+
+
+
+nav a:hover {
+  color: #000000;
+  text-decoration: none;
+
+
+}
+
+
+
+.prod_name{
+  color:initial;
+  color: white;
+}
+
+.productbanner{
+  background-color: rgba(10, 10, 143, 0.612);
+  height:100px;
+  text-transform: uppercase;
+  font-size: larger;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0 0 10px 5px rgba(169, 169, 169, 0.5); /* Blurred border effect */
+
+}
+
+.productbannertext{
+  margin-left:10%;
+}
+.productbanner:hover{
+  background-color: rgb(66, 6, 6);
+}
+
+p{
+  color: aliceblue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.p2{
+background-color: aliceblue;
+}
+
+section._box{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ border-radius: 1cm;
+  padding-top: 1.5%;
+margin-top: 50px;
+padding:5%;
+
+
+}
+section._box2{
+
+  border-radius: 1cm;
+   padding: 1%;
+   font-size: xx-large;
+ 
+ 
+ 
+ }
+p{
+  
+
+  font-size: medium;
+}
+
+.icon_section{
+   display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+  .icon {
+  
+  
+    background-color: rgba(240, 255, 255, 0.278);
+  
+    position:relative;
+    left: 0%;
+    width:100px;
+    padding: 0%;
+   
+  
+  
+    border-radius: 5px; /* Makes it a circle */
+  
+    backdrop-filter: blur(5px);
+  }
+
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    padding: 5%;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    backdrop-filter: invert(80%);
+     background-color: rgba(4, 4, 135, 0.23);
+
+color: aliceblue;
+
+  }
+  
+  

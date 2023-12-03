@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+    <div class = "aim_blut_at_this">
+        <div class = "glass_plane">
+      <div class = "productdescdiv">  
+
+    <h1 class = "prod_name">ADVANCED SEARCH RESULTS: USERS </h1>
+
+    <div class =      "holdtext_centre"    >  
+    {% if matching_users %}
+        <ul>
+            {% for user in matching_users %}
+                <li>
+                    <strong>{{ user.username }}</strong>
+                    <ul>
+                        <li>Email: {{ user.email }}</li>
+                        <li>Age: {{ user.age }}</li>
+                        <!-- Add other fields you want to display from the Users model -->
+                        
+                        {% if user.searchentry %}
+                            <li>Search Query: {{ user.searchentry.query }}</li>
+                            <li>Age from Search Entry: {{ user.searchentry.age }}</li>
+                            <!-- Add other fields from the SearchEntry model -->
+                        {% endif %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No matching users found.</p>
+    {% endif %}        </div>
+  </div>
+</div> 
+
+
+</div>
+{% endblock %}

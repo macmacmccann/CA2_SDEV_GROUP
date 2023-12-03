@@ -344,13 +344,7 @@
             </ul>
         </nav>
 
-        <nav>
-            <ul>
-                <li><a href="{% url 'signup' %}" >UPLOAD AN IMAGE</a></li>
 
-
-            </ul>
-        </nav>
 
             <nav class = "header_body_border"><ul><li></li> </ul> </nav>
     </div>
@@ -388,7 +382,19 @@
 <button class="btnsearch btn-outline-secondary" type="submit">Search</button>  
 </form>   
         </ul>
-    </nav>
+    </nav>   
+    {% if user.is_superuser %}
+
+<nav>
+    <ul>
+            <form style = "background-color: transparent;"class="rownav" action="{% url 'search:search_users' %}" method ="get"> 
+            <input name = "q" class="form-control me-2" type="search" placeholder="Advanced Search" aria-label="Search">        
+            <button class="btnsearch btn-outline-secondary" type="submit">SEARCH USERS</button>  
+            </form>   
+    </ul>
+</nav>
+
+    {% endif %}
         </div>
 </div>
 

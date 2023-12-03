@@ -5,6 +5,12 @@
 {% block title %}Edit Profile{% endblock title %}
 {% block content %}
 {% if user.is_authenticated %}
+
+<div class = "aim_blut_at_this">
+    <div class = "glass_plane">
+
+
+
 <h1>Edit Profile</h1>
 <br/>
 <div class="form-group">
@@ -13,6 +19,8 @@
 {{ form.as_table }}
 <input class="btn btn-success" type="submit" value="Update Profile">
 </form>
+</div>  
+    </div>
 </div>
 {% else %}
 You're not allowed here
