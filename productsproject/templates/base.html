@@ -103,11 +103,12 @@
 
 
 
-
-
-            <nav>
-                <ul>
-                 <!--   <li><a href="admin/">ADMIN</a></li> STUPIDLY LINKED LINK -->
+  
+            <nav class = "adminonline">
+            
+{% if user.is_superuser %}
+                <div class = "online_dot"></div><h5 style = "margin-top:10px; margin-left:-300px; color:aliceblue"> ADMIN ACTIVATED</h5>
+{% endif %}
                 <li><a href="{% url 'admin:index' %}">▢ ADMIN ▢</a></li>
                 </ul>
             </nav>
@@ -275,7 +276,7 @@
 
             <nav>
                 <ul>
-                <li style = ""><a  style = "display: flex;"href="{% url 'cart:cart_detail' %} ">
+                <li><a  style = "display: flex;"href="{% url 'cart:cart_detail' %} ">
                     
                     
                     <h2 class = "fixcartitle">  CART  </h2>
@@ -323,13 +324,19 @@
         </nav>
 
 
+
+
+        {% if user.is_authenticated %}
         <nav>
+
             <ul>
-                <li><a href="{% url 'signup' %}">CUSTOM USER MODEL</a></li>
-                <li><a href="{% url 'signup' %}" >[1-1,M-M,_ONE - MANY]</a></li>
-                <li><a href="{% url 'signup' %}" >USER PROFILE</a></li>
+                <li><a href="{% url 'show_profile' user.profile.pk %}"  class="dropdown-item">View Profile</a> </li>
+                <li><a href="{% url 'edit_profile' user.profile.pk %}" class="dropdown-item">Edit Profile</a> </li>       
             </ul>
         </nav>
+        {% endif %}
+
+
 
         <nav>
             <ul>

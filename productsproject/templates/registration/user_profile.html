@@ -1,0 +1,88 @@
+
+
+
+
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %} User Profile {% endblock title %}
+{% block content %}
+
+
+
+
+<div class = "aim_blut_at_this">
+    <div class = "glass_plane">
+  
+        <div class = "profile_pic_wrapper">
+<h1 style = "color:white; text-transform:uppercase"> {{ user.profile.user }}</h1>
+        </div>
+
+
+<div class = "profile_pic_wrapper">
+<img  class = "profile_pic" src="{{ user.profile.profile_pic.url }}" alt="Profile Picture">
+
+
+
+</div>
+
+
+
+<div class = "profile_pic_wrapper">
+        
+    <button class="btnavail btn-success"><a href="{% url 'update_avail' pk=1 %}">  <h6 style = "color:white; text-transform:uppercase"> CHANGE AVAILABILITY</h6>
+        </a>
+ </button>
+
+
+
+
+    </div>
+    
+
+
+
+{% if user.profile.available_status %}
+ 
+<div class = "profile_pic_wrapper">
+
+<div class = "online_dot"></div>
+<div>ONLINE</div>
+</div>
+{% else %}
+<div class = "profile_pic_wrapper">
+<div class = "offline_dot"> </div>
+<div>OFFLINE</div>
+</div>
+
+{% endif %}
+
+
+<div class = "profile_pic_wrapper">
+    <br>
+
+
+
+<br>
+{{ user.profile.bio }}
+<br>
+<br>
+My favourite course is : {{ user.profile.fav_course }}
+<br>
+<br>
+<br>
+<br>
+
+
+</div>
+
+{%  include 'footer.html'   %}
+
+
+</div>
+    </div>
+
+{% endblock content %}
+
+
+

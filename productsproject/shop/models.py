@@ -4,6 +4,8 @@ from django.db import models
 from django.db import models
 import uuid
 from django.urls import reverse
+from django.core.validators import MinValueValidator, MaxValueValidator
+
 
 class Category(models.Model):
     id = models.UUIDField(
@@ -40,6 +42,18 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, blank = True, null= True)
     updated = models.DateTimeField(auto_now=True, blank = True, null= True)
+
+    #Additional fields
+
+    percentage_pass_rate = models.DecimalField(
+        max_digits=10,  
+        decimal_places=0,  
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(100),
+        ],
+        default=0.0
+    )
 
     class Meta:
         ordering = ('name',)

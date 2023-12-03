@@ -1,0 +1,32 @@
+
+
+
+{% load static %}
+{% block content %}
+
+<div class = "aim_blut_at_this">
+    <div class = "glass_plane">
+
+     
+<div class = "profile_pic_wrapper">
+{% if user.is_authenticated %}
+
+<form method="post" action="{% url 'update_avail'  pk=user.profile.pk %}">
+    {% csrf_token %}
+    {{ form.as_table }}
+
+    <input class="btn btn-success" type="submit" value="ONLINE VERIFICATION">
+</form>
+
+        
+    </div>
+ 
+     </div>
+</div>
+
+
+
+
+
+{% endif %}
+{% endblock content %} 
