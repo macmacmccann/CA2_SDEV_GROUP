@@ -16,20 +16,15 @@
     {% if matching_users %}
         <ul>
             {% for user in matching_users %}
-                <li>
-                    <strong>{{ user.username }}</strong>
-                    <ul>
-                        <li>Email: {{ user.email }}</li>
-                        <li>Age: {{ user.age }}</li>
-                        <!-- Add other fields you want to display from the Users model -->
-                        
-                        {% if user.searchentry %}
-                            <li>Search Query: {{ user.searchentry.query }}</li>
-                            <li>Age from Search Entry: {{ user.searchentry.age }}</li>
-                            <!-- Add other fields from the SearchEntry model -->
-                        {% endif %}
-                    </ul>
-                </li>
+                    <h1>{{ user.username }}</h1>
+                        <img  class = "profile_pic" src="{{ user.profile.profile_pic.url }}" alt="Profile Picture">
+                        <h5>Email: {{ user.email }}</h5>
+                        <h5>IQ Level: {{ user.iq_level }}</h5>
+                        <h5>Coding Level: {{ user.coding_level }}</h5>
+                        <h5>Address: {{ user.address }}</h5>
+                        <h5>Age: {{ user.age }}</h5>
+
+         
             {% endfor %}
         </ul>
     {% else %}

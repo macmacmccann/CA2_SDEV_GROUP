@@ -13,7 +13,7 @@ class SearchEntry(models.Model):
     iq_level = models.PositiveIntegerField(null=True, blank=True, default=0)
     coding_level = models.PositiveIntegerField(null=True, blank=True, default=0)
     address = models.CharField(max_length=100, default='')
+    image = models.ImageField(upload_to='users', null=True, blank=True)
 
     def __str__(self):
         return f"{self.user.username} Search Entry"
-

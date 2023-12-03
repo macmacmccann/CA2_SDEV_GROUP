@@ -14,8 +14,8 @@ class CustomUserAdmin(UserAdmin):
 
 
     list_display = ['username','email','age','iq_level' , 'coding_level','address', 'group']
-    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("age","group")}),)
-    add_fieldsets = UserAdmin.add_fieldsets +  ((None, {"fields": ("age",)}),)
+    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ('iq_level' , 'coding_level','group','age','address')}),)
+    #add_fieldsets = UserAdmin.add_fieldsets +  ((None, {"fields": ("age",)}),)
 
 
 

@@ -378,8 +378,12 @@
 
 
 <form style = "background-color: transparent;"class="rownav" action="{% url 'shop:search_results' %}" method ="get"> 
-<input name = "q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">        
+
+
+
+    <input name = "q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">        
 <button class="btnsearch btn-outline-secondary" type="submit">Search</button>  
+
 </form>   
         </ul>
     </nav>   
@@ -388,7 +392,10 @@
 <nav>
     <ul>
             <form style = "background-color: transparent;"class="rownav" action="{% url 'search:search_users' %}" method ="get"> 
-            <input name = "q" class="form-control me-2" type="search" placeholder="Advanced Search" aria-label="Search">        
+            <input class="" type="search" name="group_contains" placeholder="What group their in" />
+            <input class="" type="search" name="age_contains" placeholder="What age they are" />
+            <input class="" type="search" name="username_contains" placeholder="Their username" />
+
             <button class="btnsearch btn-outline-secondary" type="submit">SEARCH USERS</button>  
             </form>   
     </ul>
