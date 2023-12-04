@@ -305,17 +305,28 @@
 
                 
                 {% if user.is_authenticated %}
-              <li>  <a href="{% url 'logout' %}"> LOG OUT </a></li>
+
+                <li>
+                    <ul>
 
 
-                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
-                    {% csrf_token %}
-                </form>
-               <!--  <li><a href="accounts/password-change/"></a></li> -->
-               <li><a href="{% url 'password_change' %}">CHANGE PASSWORD</a></li>
 
-                {% else %} 
+                    <form class = "logout" action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button  class = "logoutbutton"type="submit">LOGOUT</button>
+                    </form>                    </ul>
+
+                </li>
+            </ul>
+            </nav>
+             <nav>
+                <ul>
+               <li><a href="{% url 'password_change' %}">CHANGE PASSWORD</a></li></ul>
+            </nav>
+
+                 {% else %} 
+
+      
                 <li><a href="  {% url 'login' %}  "> LOG IN </a></li>
                <li><a href="{% url 'password_reset' %}">FORGOT PASSWORD?</a></li>
                  <li><a href="{% url 'signup' %}">SIGN UP</a></li>
