@@ -305,7 +305,13 @@
 
                 
                 {% if user.is_authenticated %}
-                {% csrf_token %}<li>  <a href="{% url 'logout' %}"> LOG OUT </a></li>
+              <li>  <a href="{% url 'logout' %}"> LOG OUT </a></li>
+
+
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+                    {% csrf_token %}
+                </form>
                <!--  <li><a href="accounts/password-change/"></a></li> -->
                <li><a href="{% url 'password_change' %}">CHANGE PASSWORD</a></li>
 

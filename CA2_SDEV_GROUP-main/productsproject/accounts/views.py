@@ -97,10 +97,9 @@ class ProfileCreationView(View):
             if isinstance(request.user, get_user_model()):
                 profile.user = request.user
                 profile.save()
-                return redirect('view_profile')
+                return redirect('profile')
             else:
-                # Handle the case when request.user is not a CustomUser instance
-                # This could happen if the user is not authenticated
+           
                 return render(request, 'base.html', {'error_message': 'Invalid user type'})
 
 

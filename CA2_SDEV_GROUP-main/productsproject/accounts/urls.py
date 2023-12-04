@@ -3,6 +3,7 @@ from django.urls import path
 from .views import SignUpView, ProfileEditView, ProfilePageView,ProfileEditStatusView,ProfileCreationView
 from . import views
 from django.views.generic import TemplateView
+from django.contrib.auth.views import LogoutView
 
 
 
@@ -19,6 +20,7 @@ urlpatterns = [
     path('profile/<int:pk>/', ProfilePageView.as_view(),name= 'show_profile'),
     path('update_avail/<int:pk>/', ProfileEditStatusView.as_view(), name='update_avail'),
 
+    path('accounts/logout/', LogoutView.as_view(), name='logout'),
 
 
 
