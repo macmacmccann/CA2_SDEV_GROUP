@@ -1,0 +1,20 @@
+
+Users 
+admin
+Adminuser101
+
+also 
+
+admin
+no password
+
+http://127.0.0.1:8080/admin/
+
+
+nope they both dont work 
+
+
+python3 manage.py createsuperuser
+
+admin
+passwordP1
