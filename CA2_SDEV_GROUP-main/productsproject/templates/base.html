@@ -317,21 +317,18 @@
             </ul>
         </nav>
 
-        <nav>
-            <ul>
-                      <p></p> <!--  FILLER -->
-            </ul>
-        </nav>
 
-
-
-
-        {% if user.is_authenticated %}
-        <nav>
-
-            <ul>
-                <li><a href="{% url 'show_profile' user.profile.pk %}"  class="dropdown-item">View Profile</a> </li>
-                <li><a href="{% url 'edit_profile' user.profile.pk %}" class="dropdown-item">Edit Profile</a> </li>       
+{% if user.profile %}
+                 {# User has a profile #}
+<nav>
+            <ul>   
+                <li><a href="{% url 'show_profile' user.profile.pk %}" >View Profile</a> </li>
+                <li><a href="{% url 'edit_profile' user.profile.pk %}" >Edit Profile</a> </li>  
+            </ul></nav>
+                            {% else %}
+<nav>
+            <ul>     
+                <li><a href="{% url 'create_profile' user.profile.pk %}">Create Profile</a> </li>       
             </ul>
         </nav>
         {% endif %}

@@ -31,7 +31,7 @@ class SignUpView(generic.CreateView):
             signup_user = CustomUser.objects.get(username=username) 
             group = form.cleaned_data.get('group') 
             group.user_set.add(signup_user) 
-            return redirect('signup_success') 
+            return redirect('create_profile') 
         else: 
             return render(request, self.template_name, {'form' : form }) 
 
