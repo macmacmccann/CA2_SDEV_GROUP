@@ -22,7 +22,8 @@ from django.contrib.auth.views import LoginView
 
 urlpatterns = [
     
-   path('admin/', admin.site.urls),
+    path('auth/', include('social_django.urls', namespace='social')),
+    path('admin/', admin.site.urls),
     path('', include('shop.urls')),
     path('cart/', include('cart.urls')),
     path('custom-accounts/', include('accounts.urls')),  # Your custom account URLs

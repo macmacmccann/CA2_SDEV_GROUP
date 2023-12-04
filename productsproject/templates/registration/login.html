@@ -18,7 +18,15 @@
 <br>
         <h1 class = "text-primary"> Log In</h1>
         <form style = "background-color: transparent;" action = "" method= "POST" >
-
+                <div class="social-login-buttons">
+                        <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-primary btn-block">
+                            <i class="fab fa-facebook"></i> Login with Facebook
+                        </a>
+                        <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-info btn-block">
+                            <i class="fab fa-google"></i> Login with Google
+                        </a>
+                        <!-- Add more social media buttons as needed -->
+                    </div>
             {% csrf_token %}
             {{ form.as_table }}
             <br>
@@ -27,6 +35,8 @@
 
             </form>
             {% include 'footer.html'    %}
+
+          
 
   </div>
 </div>

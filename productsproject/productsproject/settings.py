@@ -49,6 +49,10 @@ INSTALLED_APPS = [
     'stripe',
     'order',
     'search',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
 
     # Third Party
     'crispy_forms',
@@ -63,7 +67,19 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
+
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        'APP': {
+            'client_id': '1711452356006201',
+            'secret': '16612abf4862f9325f3916985f8807b6',
+            'key': '',
+        }
+    }
+}
 
 ROOT_URLCONF = 'productsproject.urls'
 
@@ -157,3 +173,26 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+
+
+SOCIAL_AUTH_AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    # Add other backends as needed
+    # ...
+)
+
+
+
+# settings.py
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '147233319171-kmrossj1l1243ofm9mf3g4acvsokd9l5.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1711452356006201'
+SOCIAL_AUTH_FACEBOOK_SECRET = '16612abf4862f9325f3916985f8807b6'
+
+# settings.py
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_URL = 'logout'
