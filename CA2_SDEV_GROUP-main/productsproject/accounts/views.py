@@ -9,6 +9,7 @@ from .models import CustomUser
 from django.urls import path
 from django.views import View
 from django.views.generic import TemplateView, CreateView, UpdateView, DetailView
+from django.contrib.auth import get_user_model
 
 
 from accounts.forms import CustomUserCreationForm
@@ -90,8 +91,19 @@ class ProfileCreationView(View):
         form = ProfileCreationForm(request.POST)
         if form.is_valid():
             profile = form.save(commit=False)
-            profile.user = request.user  
-            profile.save()
-            return redirect('profile_created')  
+
+
+  # Ensure request.user is a CustomUser instance
+            if isinstance(request.user, get_user_model()):
+                profile.user = request.user
+                profile.save()
+                return redirect('view_profile')
+            else:
+                # Handle the case when request.user is not a CustomUser instance
+                # This could happen if the user is not authenticated
+                return render(request, 'base.html', {'error_message': 'Invalid user type'})
+
+
+      
         return render(request, self.template_name, {'form': form})
 

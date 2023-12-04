@@ -1,16 +1,47 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Create Profile{% endblock title %}
-{% block content %}
+
+
+
+    {% block content %}
+
+
+{% if user.is_anonymous %}
+
 <div class="aim_blut_at_this">
     <div class="glass_plane">
-        <h1 style = "color:white">Create Profile</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_table }}
-            <input class="btn btn-success" type="submit" value="Create Profile">
-        </form>
-    </div>
+        <br>
+        <br>
+        <br>
+
+<h1 style = "color:white">Please Log in First to Create a Profile</h1>
+<br>
+<br>
+<br>
+
 </div>
-{% endblock content %}
+</div>
+{% else %}
+
+    {% block title %}Create Profile{% endblock title %}
+
+    <div class="aim_blut_at_this">
+        <div class="glass_plane">
+            <h1 style = "color:white">Create Profile for{{ user }}</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_table }}
+                <input class="btn btn-success" type="submit" value="Create Profile">
+            </form>
+        </div>
+    </div>
+     {% endif %}
+
+    {% endblock content %}
+
+
+
+
+
+

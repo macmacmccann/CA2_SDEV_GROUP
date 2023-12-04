@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+
+
+
+
+        {% block title %}
+        <title> Logout </title>
+        {% endblock title %}
+
+
+
+        {% block content %}
+<div class = "aim_blut_at_this">
+<div class = "glass_plane">
+
+
+<br>
+        <h1 class = "text-primary"> Log In</h1>
+        <form style = "background-color: transparent;" action = "" method= "POST" >
+
+            {% csrf_token %}
+            {{ form.as_table }}
+            <br>
+            <br>
+            <input  style = "margin-top:35px;"type="submit" class="btn btn-primary" value="Log Out" />
+
+            </form>
+            {% include 'footer.html'    %}
+
+  </div>
+</div>
+
+      {% endblock content %}
+
+    
+
+
