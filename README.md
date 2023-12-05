@@ -120,3 +120,8 @@ Yes you have to search for the user name group and age to get the user
 
 
 ***OTHER NON -ECOMMERCE /COMMERCE FEATURES***
+	WHO PUSHED? : Ollie
+
+ Allow the user to sign in using google or facebook 
+
+
