@@ -13,3 +13,6 @@
 	stripe==7.6.0
 	typing_extensions==4.8.0
 	urllib3==2.1.0
+	social-auth-app-django==5.4.0
+	social-auth-core==4.5.1
+	django-allauth==0.58.2
