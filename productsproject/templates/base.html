@@ -404,12 +404,11 @@
 </form>   
         </ul>
     </nav>   
-    {% if user.is_superuser %}
 
 <nav>
     <ul>
             <form style = "background-color: transparent;"class="rownav" action="{% url 'search:search_users' %}" method ="get"> 
-            <input class="" type="search" name="group_contains" placeholder="What group their in" />
+            <input class="" type="search" name="group_contains" placeholder="What group their in eg.,BUYER " />
             <input class="" type="search" name="age_contains" placeholder="What age they are" />
             <input class="" type="search" name="username_contains" placeholder="Their username" />
 
@@ -418,7 +417,6 @@
     </ul>
 </nav>
 
-    {% endif %}
         </div>
 </div>
 

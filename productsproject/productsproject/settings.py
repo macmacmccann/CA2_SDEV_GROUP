@@ -50,9 +50,10 @@ INSTALLED_APPS = [
     'order',
     'search',
     'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
+   # 'allauth.account',
+    #'allauth.socialaccount',
+   # 'allauth.socialaccount.providers.facebook',
+  # 'django.contrib.sites',
 
     # Third Party
     'crispy_forms',
@@ -67,7 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
+ #   'allauth.account.middleware.AccountMiddleware',
 
 ]
 
